@@ -109,9 +109,10 @@ const CartPage: React.FC = () => {
               <span>Total</span>
               <span>${total.toFixed(2)}</span>
             </div>
-
-            <Link to="/checkout" className={styles.checkoutBtn}>
-              Proceed to Checkout
+            <Link to="/checkout">
+              <button className={styles.checkoutBtn}>
+                Proceed to Checkout
+              </button>
             </Link>
 
             <button className={styles.clearCartBtn} onClick={clearCart}>

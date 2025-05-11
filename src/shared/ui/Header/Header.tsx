@@ -12,19 +12,6 @@ export const Header: React.FC = () => {
             <h1>Shop</h1>
           </Link>
         </div>
-        <nav className={styles.navigation}>
-          <ul>
-            <li>
-              <Link to="/">Products</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-        </nav>
         <div className={styles.actions}>
           <CartWidget />
         </div>

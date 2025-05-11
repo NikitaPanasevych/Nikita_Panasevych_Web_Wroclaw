@@ -11,20 +11,6 @@ export const Footer: React.FC = () => {
             <p>Your one-stop shop for quality products.</p>
           </div>
           <div className={styles.footerSection}>
-            <h3>Links</h3>
-            <ul>
-              <li>
-                <a href="/terms">Terms & Conditions</a>
-              </li>
-              <li>
-                <a href="/privacy">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="/faq">FAQ</a>
-              </li>
-            </ul>
-          </div>
-          <div className={styles.footerSection}>
             <h3>Contact</h3>
             <p>Email: contact@shop.com</p>
             <p>Phone: +1 (123) 456-7890</p>
