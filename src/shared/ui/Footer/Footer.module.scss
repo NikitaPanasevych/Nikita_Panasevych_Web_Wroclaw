@@ -22,31 +22,31 @@
   flex: 1;
   min-width: 200px;
   margin-bottom: 20px;
-  
+
   h3 {
     font-size: 18px;
     margin-bottom: 15px;
     color: #333;
   }
-  
+
   p {
     margin: 8px 0;
     color: #666;
   }
-  
+
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    
+
     li {
       margin-bottom: 8px;
-      
+
       a {
         text-decoration: none;
         color: #666;
         transition: color 0.2s ease;
-        
+
         &:hover {
           color: #0077cc;
         }
@@ -59,7 +59,7 @@
   text-align: center;
   padding-top: 20px;
   border-top: 1px solid #ddd;
-  
+
   p {
     color: #888;
     font-size: 14px;
@@ -70,7 +70,7 @@
   .footerContent {
     flex-direction: column;
   }
-  
+
   .footerSection {
     margin-bottom: 30px;
   }

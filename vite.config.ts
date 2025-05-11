@@ -4,6 +4,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import { resolve } from "path";
 
 export default defineConfig({
+  base: "/Nikita_Panasevych_Web_Wroclaw/",
   plugins: [react(), tsconfigPaths()],
   build: {
     rollupOptions: {

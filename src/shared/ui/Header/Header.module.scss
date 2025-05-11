@@ -32,16 +32,16 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    
+
     li {
       margin: 0 15px;
-      
+
       a {
         text-decoration: none;
         color: #333;
         font-weight: 500;
         transition: color 0.2s ease;
-        
+
         &:hover {
           color: #0077cc;
         }
@@ -60,7 +60,7 @@
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s ease;
-    
+
     &:hover {
       background-color: #0056b3;
     }
@@ -73,15 +73,17 @@
     height: auto;
     padding: 15px 20px;
   }
-  
-  .logo, .navigation, .actions {
+
+  .logo,
+  .navigation,
+  .actions {
     margin: 10px 0;
   }
-  
+
   .navigation ul {
     flex-wrap: wrap;
     justify-content: center;
-    
+
     li {
       margin: 5px 10px;
     }

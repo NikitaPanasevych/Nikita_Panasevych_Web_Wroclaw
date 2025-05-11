@@ -35,7 +35,10 @@ const OrderConfirmationPage: React.FC = () => {
         <div className={styles.noOrder}>
           <h1>No Order Found</h1>
           <p>We couldn't find any recent order information.</p>
-          <a href="/" className={styles.shopButton}>
+          <a
+            href={`${import.meta.env.BASE_URL}/`}
+            className={styles.shopButton}
+          >
             Go to Products
           </a>
         </div>
@@ -129,7 +132,10 @@ const OrderConfirmationPage: React.FC = () => {
         </div>
 
         <div className={styles.actions}>
-          <a href="/" className={styles.continueShoppingButton}>
+          <a
+            href={`${import.meta.env.BASE_URL}/`}
+            className={styles.continueShoppingButton}
+          >
             Continue Shopping
           </a>
         </div>

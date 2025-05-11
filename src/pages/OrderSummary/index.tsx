@@ -38,7 +38,7 @@ const OrderSummaryPage: React.FC = () => {
     clearCart();
 
     // Use window.location.href for a full page reload to a separate HTML page
-    window.location.href = "/confirmation.html";
+    window.location.href = `${import.meta.env.BASE_URL}confirmation.html`;
   };
 
   return (

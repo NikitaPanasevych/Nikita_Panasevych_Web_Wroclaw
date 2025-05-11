@@ -9,7 +9,8 @@
   color: #333;
 }
 
-.loading, .error {
+.loading,
+.error {
   padding: 24px;
   text-align: center;
   font-size: 18px;
@@ -37,7 +38,7 @@
     font-size: 24px;
     margin-bottom: 24px;
   }
-  
+
   .productGrid {
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 16px;
