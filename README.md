@@ -1,54 +1,46 @@
-# React + TypeScript + Vite
+## Project Approach
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+During this test assignment, I aimed to fulfill basic requirements provided in the assignment description, while also considering scaling and maintainability. I also considered the possibility of implementing additional features and improvements in the future. 
 
-Currently, two official plugins are available:
+I decided to use Feature-Sliced Design (FSD) architecture, which promotes code organization and maintainability. For state management, I chose Redux Toolkit over React Context API, as it provides a more scalable and maintainable solution for managing complex state. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Since this task doesn't include an actual API endpoint, I utilized the provided JSON file with RTK Query to simulate API requests. This approach allows for easy replacement with real API endpoints in the future.
 
-## Expanding the ESLint configuration
+For styling, I implemented SCSS modules to ensure component-scoped styling that prevents style conflicts and improves maintainability. I also configured Prettier for code formatting, ESLint for code consistency, Jest for unit testing, and Husky for pre-commit hooks to ensure code quality and prevent committing errors.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This project follows the Feature-Sliced Design (FSD) architecture, organizing code into layers:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
+- **entities**: Core business logic (products, cart)
+- **features**: User interactions (add to cart)
+- **pages**: Application screens
+- **shared**: UI components and utilities
+- **app**: Application setup and configuration
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Technical Implementation
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+- **State Management**: Redux Toolkit for global state
+- **Data Fetching**: RTK Query for mock API requests
+- **Routing**: React Router for navigation
+- **Styling**: SCSS modules for component-scoped styling
+- **Testing**: Jest for unit testing
+- **Build**: Vite for fast development and optimized production builds
+- **Deployment**: GitHub Pages
+- **Linting**: ESLint with Prettier for code consistency
+- **Api**: Mocked API for demonstration purposes
+- **Pre-commit**: Husky for pre-commit hooks
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    "react-x": reactX,
-    "react-dom": reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs["recommended-typescript"].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Run tests
+npm test
 ```
