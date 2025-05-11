@@ -18,12 +18,10 @@ export const useCart = () => {
   const total = useSelector(selectCartTotal);
 
   return {
-    // State
     items,
     itemsCount,
     total,
 
-    // Actions
     addItem: (product: Product) => dispatch(addToCart(product)),
     removeItem: (productId: number) => dispatch(removeFromCart(productId)),
     incrementItem: (productId: number) =>
