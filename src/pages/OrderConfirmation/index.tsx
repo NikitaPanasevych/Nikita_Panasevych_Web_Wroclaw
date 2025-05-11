@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { formatPrice } from "@entities/product/lib/formatPrice";
 import styles from "./OrderConfirmation.module.scss";
-import type { CartItem } from "@entities/cart/model/slice";
+import type { CartItem } from "@entities/cart/types/Cart";
 
 interface OrderData {
   items: CartItem[];
@@ -12,7 +12,6 @@ interface OrderData {
 }
 
 const OrderConfirmationPage: React.FC = () => {
-  console.log("OrderConfirmationPage rendered");
   const [orderData, setOrderData] = useState<OrderData | null>(null);
 
   useEffect(() => {

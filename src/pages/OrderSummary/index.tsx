@@ -27,14 +27,12 @@ const OrderSummaryPage: React.FC = () => {
     const orderData = {
       items: items,
       subtotal: total,
-      tax: total * 0.1,
-      total: total * 1.1,
+      total: total,
       orderId: `ORD-${Date.now()}`,
       date: new Date().toISOString(),
     };
     localStorage.setItem("lastOrder", JSON.stringify(orderData));
 
-    // Clear the cart
     clearCart();
 
     // Use window.location.href for a full page reload to a separate HTML page
@@ -98,14 +96,9 @@ const OrderSummaryPage: React.FC = () => {
               <span>Free</span>
             </div>
 
-            <div className={styles.summaryRow}>
-              <span>Tax</span>
-              <span>${(total * 0.1).toFixed(2)}</span>
-            </div>
-
             <div className={`${styles.summaryRow} ${styles.total}`}>
               <span>Total</span>
-              <span>${(total * 1.1).toFixed(2)}</span>
+              <span>${total.toFixed(2)}</span>
             </div>
 
             <button

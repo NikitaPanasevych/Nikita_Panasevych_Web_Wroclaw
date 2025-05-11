@@ -33,7 +33,12 @@ const CartPage: React.FC = () => {
   return (
     <MainLayout>
       <div className={styles.cartPage}>
-        <h1 className={styles.title}>Your Cart ({itemsCount} items)</h1>
+        <div className={styles.cartHeader}>
+          <h1 className={styles.title}>Your Cart ({itemsCount} items)</h1>
+          <Link to="/" className={styles.backToProductsBtn}>
+            Back to Products
+          </Link>
+        </div>
 
         <div className={styles.cartContent}>
           <div className={styles.cartItems}>
